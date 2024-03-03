@@ -1,0 +1,35 @@
+body{
+  background-color: aquamarine;
+}
+.Prophesy {
+  text-align: center;
+  margin-top: 20px;
+  background-color:  aquamarine;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 300px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 20px;
+}
