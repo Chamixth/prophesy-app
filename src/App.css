@@ -1,35 +1,93 @@
-body{
-  background-color: aquamarine;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.Prophesy {
+.app-name{
   text-align: center;
-  margin-top: 20px;
-  background-color:  aquamarine;
+  padding: 40px 0px
 }
-
-h1 {
-  font-size: 30px;
-  margin-bottom: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.topnav{
+  overflow: hidden;
+  background-color:  #e9e9e9;
 }
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
+.topnav a{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav .search-container{
+  float: right;
+}
+.topnav a.active{
+  background-color: #ddd;
+  color: white;
+}
+.topnav a:hover{
+  background-color: #ddd;
+  color: white;
+}
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
   border: none;
-  border-radius: 4px;
+}
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
   cursor: pointer;
-  margin-top: 300px;
+}
+.topnav .search-container button:hover {
+  background: #ccc;
 }
 
-button:hover {
-  background-color: #0056b3;
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
 }
 
-p {
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
   font-size: 18px;
-  font-style: italic;
-  margin-top: 20px;
+}
+
+.card button:hover {
+  opacity: 0.7;
 }

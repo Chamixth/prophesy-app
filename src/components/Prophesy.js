@@ -1,27 +1,27 @@
+// Prophesy.js
+
 import React, { useState } from 'react';
+import prophesy from '../services/prophesy';
 
-const prophecies = [
-  "A great fortune will come your way.",
-  "You will meet someone important today.",
-  "Good things are coming your way.",
-  "An opportunity will arise soon.",
-  "Your hard work will pay off.",
-  "A journey will bring you happiness."
-];
-
-export default function Prophesy() {
+const Prophesy = () => {
   const [currentProphecy, setCurrentProphecy] = useState('');
 
-  const getRandomProphecy = () => {
-    const randomIndex = Math.floor(Math.random() * prophecies.length);
-    setCurrentProphecy(prophecies[randomIndex]);
+  const getRandomProphecy = async () => {
+    try {
+      const prophecy = await prophesy.GetProphesy();
+      setCurrentProphecy(prophecy);
+    } catch (error) {
+      console.error('Error fetching prophecy:', error);
+    }
   };
 
   return (
     <div className='Prophesy'>
       <h1>Prophecy App</h1>
       <button onClick={getRandomProphecy}>Get Prophecy</button>
-      {currentProphecy && <p>{currentProphecy}</p>}
+      {currentProphecy.prophesy && <p>{currentProphecy.prophesy}</p>}
     </div>
   );
-}
+};
+
+export default Prophesy;

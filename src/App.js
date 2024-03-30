@@ -1,12 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import './components/Prophesy'
-import Prophesy from './components/Prophesy';
-
+import './components/NavBar'
+import Home from './components/NavBar';
+import NavBar from './components/NavBar';
+import Body from './components/Body';
+import Temp from './components/Temp';
 function App() {
   return (
     <div className="App">
-      <Prophesy />
+      <NavBar />
+      <Body />
+      <Temp />
     </div>
   );
 }
